@@ -46,7 +46,7 @@ def generate_tweet(state:TweetState):
         HumanMessage(content = """
         write a short, original, and hilarious tweet on the topic: "{state['topic']}".
         rules:
-        - Do NOT use question-anwer format.
+        - Do NOT use question-answer format.
         - max 289 characters.
         - use observational humor, irony, sarcasm, or cultural references.
         - use simple ,day to day english
@@ -65,6 +65,7 @@ def evaluate_tweet(state:TweetState):
         evaluate the following tweets:
         Tweet :"{state['tweet']}"
         use the criteria below to evaluate the tweet:
+        *important*: The tweet should be regarding the topic given "{state['topic']}".
         1.originality - is this fresh, or have you seen it a hundred times before?
         2.Humor - Did it genuinely make you smile,laugh,or chuckle?
         3.Punchiness -Is it short,sharp,and scroll-stopping?
